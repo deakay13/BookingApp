@@ -32,8 +32,8 @@ jobs:
 
       - name: Create Pull Request
         run: |
-          git config --global user.name "Your Name"
-          git config --global user.email "you@example.com"
+          git config --global user.name "deakay13"
+          git config --global user.email "nguyenleduykhang13@gmail.com"
           git checkout -b feature/pr-from-action
           git add .
           git commit -m "Automated PR: Build successful"
