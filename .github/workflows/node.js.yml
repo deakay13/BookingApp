@@ -28,13 +28,18 @@ jobs:
   merge:
     runs-on: ubuntu-latest
     needs: build
-    uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: merge-into-main
-          run: |
-            git checkout main
-            git pull origin main
-            git merge feature/pr-from-action
-            git push origin main
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Merge feature branch into main
+        run: |
+          git checkout main
+          git pull origin main
+          git merge feature/pr-from-action
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
