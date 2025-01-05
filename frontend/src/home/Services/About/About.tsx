@@ -6,7 +6,7 @@ export default function About() {
         <div className="h-full bg-white rounded-t-[35px]">
           <div className=" mx-20 pt-20 grid gap-6 grid-cols-2">
             <div className="w-[500px] h-[330px] rounded-xl bg-slate-600"> </div>
-            <div className="text-center"> kiểm tra code lần cuối</div>
+            <div className="text-center"> test right</div>
             <div className="text-center"> test left</div>
             <div className="w-[500px] h-[330px] rounded-xl bg-slate-600"></div>
           </div>
