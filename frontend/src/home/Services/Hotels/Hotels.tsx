@@ -1,6 +1,7 @@
 import SalesContent from "./SalesContent";
 import Locations from "./Locations";
 import Room from "./Room";
+import Information from "./Inforamtions/Informations";
 
 export default function ContentHome() {
     return (
@@ -8,7 +9,8 @@ export default function ContentHome() {
         <div className="container mx-auto px-6">
           <SalesContent/>
           <Locations/>
-          <Room/>
+          <Room />
+          <Information/>
         </div>
       </main>
     );

@@ -1,8 +1,3 @@
-
 export default function Flights() {
-  return(
-    <></>
-  )
-
+  return <> welcomes</>;
 }
-

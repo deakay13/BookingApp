@@ -52,8 +52,7 @@ export default function About() {
               <div className="space-y-3 w-[300px] h-[300px] bg-white rounded-xl outline outline-slate-200 outline-[0.5px]">
                 <div className="mx-4 mt-10 text-xl font-bold"> Flight</div>
                 <div className="mx-4 mt-5 text-xl font-bold">
-                  {" "}
-                  Car Rentals & Airport Transfers{" "}
+                  Car Rentals & Airport Transfers
                 </div>
                 <div className="mx-4 mt-5 text-3xl font-bold"> 600+ </div>
                 <div className="mx-4 mt-5 text-2xl">

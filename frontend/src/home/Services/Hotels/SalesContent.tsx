@@ -14,9 +14,9 @@ export default function SalesContent() {
               <svg
                 className="h-5 w-5 mx-2"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
@@ -33,18 +33,18 @@ export default function SalesContent() {
               <h2 className="text-2xl text-white font-semibold">
                 Freeze Check-in
               </h2>
-              <p className="mt-2 text-gray-400">
+              <p className="mt-2 text-white">
                 Receive a Christmas gift upon check-in at your hotel location.
                 From 02.12.2024 to 30.12.2024
               </p>
-              <button className="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
-                <span>Book Now</span>
+              <button className="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                <span>Booking Now</span>
                 <svg
                   className="h-5 w-5 mx-2"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
@@ -58,18 +58,18 @@ export default function SalesContent() {
           <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
             <div className="px-10 max-w-xl">
               <h2 className="text-2xl text-white font-semibold">Coupon</h2>
-              <p className="mt-2 text-gray-400">
+              <p className="mt-2 text-white">
                 Book now and receive Christmas discounts up to 70%. Only use in
                 24.12.2024
               </p>
-              <button className="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
-                <span>Book Now</span>
+              <button className="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                <span>Booking Now</span>
                 <svg
                   className="h-5 w-5 mx-2"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >

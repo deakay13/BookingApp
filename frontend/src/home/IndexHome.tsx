@@ -1,32 +1,37 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Suspense, lazy } from "react";
+
 import HeaderHome from "./Component/HeaderHome";
 import FooterHome from "./Component/FooterHome";
+import Spinner from "../spinner";
 
-import Hotels from "./Services/Hotels/Hotels";
-import Flights from "./Services/Flights";
-import BusAndShuttle from "./Services/Bus&Shuttle";
-import CarRental from "./Services/CarRental";
-import AirportTransfer from "./Services/AirportTransfer";
-import About from "./Services/About/About";
-import SignIn from "../Auth/SignIn";
-import SignUp from "../Auth/SignUp";
-
-import { Routes, Route } from "react-router-dom";
+const Hotels = lazy(() => import("./Services/Hotels/Hotels"));
+const Flights = lazy(() => import("./Services/Flights"));
+const BusAndShuttle = lazy(() => import("./Services/Bus&Shuttle"));
+const CarRental = lazy(() => import("./Services/CarRental"));
+const AirportTransfer = lazy(() => import("./Services/AirportTransfer"));
+const About = lazy(() => import("./Services/About/About"));
+const SignIn = lazy(() => import("../Auth/SignIn"));
+const SignUp = lazy(() => import("../Auth/SignUp"));
 
 export default function IndexHome() {
   return (
     <div className="bg-gradient-to-r from-blue-500 to-green-500">
       <HeaderHome />
-      <Routes>
-        <Route path="/" element={<Hotels />} />
-        <Route path="/Hotels" element={<Hotels />} />
-        <Route path="/Flights" element={<Flights />} />
-        <Route path="/Bus&Shuttle" element={<BusAndShuttle />} />
-        <Route path="/CarRental" element={<CarRental />} />
-        <Route path="/AirportTransfer" element={<AirportTransfer />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/SignIn" element={<SignIn />} />
-        <Route path="/SignUp" element={<SignUp />} />
-      </Routes>
+      <Suspense fallback={<Spinner />}>
+        <Routes>
+          <Route index element={<Hotels />} />
+          <Route path="/Hotels" element={<Hotels />} />
+          <Route path="/Flights" element={<Flights />} />
+          <Route path="/Bus&Shuttle" element={<BusAndShuttle />} />
+          <Route path="/CarRental" element={<CarRental />} />
+          <Route path="/AirportTransfer" element={<AirportTransfer />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/SignIn" element={<SignIn />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Suspense>
       <FooterHome />
     </div>
   );
