@@ -1,7 +1,8 @@
-import { useState } from "react";
-import TopFlights from "./TopFlights";
-import TopHotels from "./TopHotels";
-import TopActivities from "./TopActivities";
+import { lazy, useState } from "react";
+
+const TopFlights = lazy(() => import("./TopFlights"));
+const TopHotels = lazy(() => import("./TopHotels"));
+const TopActivities = lazy(() => import("./TopActivities"));
 
 export default function Information() {
   const [activeTab, setActiveTab] = useState(0);

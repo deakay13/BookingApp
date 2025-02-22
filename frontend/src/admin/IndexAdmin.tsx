@@ -1,6 +1,8 @@
 import HeaderAdmin from "./Component/HeaderAdmin";
 import SidebarAdmin from "./Component/SideBarAdmin";
-import IndexFunctions from "./functions/Indexfunctions";
+import { lazy } from "react";
+
+const IndexFunctions = lazy(() => import("./functions/Indexfunctions"));
 
 export default function IndexAdmin() {
   return (

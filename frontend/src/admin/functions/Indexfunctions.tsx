@@ -1,16 +1,17 @@
 import { Routes, Route } from "react-router-dom";
+import { lazy } from "react";
 
-import DashBoard from "./DashBoard";
-import TabUsers from "./ManagementUsers/Users/TabUsers";
-import Roles from "./ManagementUsers/Roles/Roles";
-import About from "./About";
-import Profiles from "./Profiles";
-import AirportTransfers from "./ManagementServices/AirportTransfers";
-import BusAndShuttles from "./ManagementServices/Bus&Shuttle";
-import CarRental from "./ManagementServices/CarRental";
-import Flights from "./ManagementServices/Flights";
-import Hotels from "./ManagementServices/Hotels";
-import Rooms from "./ManagementServices/Rooms";
+const DashBoard = lazy(() => import("./DashBoard"));
+const TabUsers = lazy(() => import("./ManagementUsers/Users/TabUsers"));
+const Roles = lazy(() => import("./ManagementUsers/Roles/Roles"));
+const About = lazy(() => import("./About"));
+const Profiles = lazy(() => import("./Profiles"));
+const AirportTransfers = lazy(() => import("./ManagementServices/AirportTransfers"));
+const BusAndShuttles = lazy(() => import("./ManagementServices/Bus&Shuttle"));
+const CarRental = lazy(() => import("./ManagementServices/CarRental"));
+const Flights = lazy(() => import("./ManagementServices/Flights"));
+const Hotels = lazy(() => import("./ManagementServices/Hotels"));
+const Rooms = lazy(() => import("./ManagementServices/Rooms"));
 
 export default function IndexFunctions() {
   return (

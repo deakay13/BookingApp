@@ -1,7 +1,9 @@
-import SalesContent from "./SalesContent";
-import Locations from "./Locations";
-import Room from "./Room";
-import Information from "./Information/Information";
+import { lazy } from "react";
+
+const SalesContent = lazy(() => import("./SalesContent"));
+const Locations = lazy(() => import("./Locations"));
+const Room = lazy(() => import("./Room"));
+const Information = lazy(() => import("./Information/Information"));
 
 export default function ContentHome() {
   return (

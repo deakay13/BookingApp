@@ -1,11 +1,10 @@
-import { useNavigate } from "react-router-dom"; // Hook dùng để điều hướng
-import { signOut } from "firebase/auth"; // Import phương thức signOut
-import { auth } from "../../firebase-config"; // Import config Firebase
+import { useNavigate } from "react-router-dom"; 
+import { signOut } from "firebase/auth"; 
+import { auth } from "../../firebase-config";
 
 export default function HeaderAdmin() {
   const navigate = useNavigate();
 
-  // Xử lý đăng xuất
   const handleLogout = async () => {
     try {
       await signOut(auth);
